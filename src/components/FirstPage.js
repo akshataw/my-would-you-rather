@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const WelcomePage = (props) => {
+const FirstPage = (props) => {
   const user = props
   return(
     <div className="container">
@@ -19,4 +19,4 @@ const WelcomePage = (props) => {
   )
 }
 
-export default WelcomePage;
+export default FirstPage;
