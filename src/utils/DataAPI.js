@@ -2,8 +2,7 @@ import {
   _getQuestions,
   _getUsers,
   _saveQuestion,
-  _saveQuestionAnswer,
-  _saveNewUser
+  _saveQuestionAnswer
 } from './_DATA.js'
 
 export function getInitialData () {
@@ -16,31 +15,10 @@ export function getInitialData () {
   }))
 }
 
-/**
- *
- * @param {string} question.optionOneText
- * @param {string} question.optionTwoText
- * @param {string} question.author
- */
 export function saveQuestion (question) {
   return _saveQuestion(question)
 }
 
-/**
- *
- * @param {string} data.authedUser
- * @param {string} data.qid
- * @param {string} data.answer
- */
 export function saveQuestionAnswer (data) {
   return _saveQuestionAnswer(data)
-}
-
-/**
- *
- * @param {string} user.username
- * @param {string} user.name
- */
-export function saveNewUser (user) {
-  return _saveNewUser(user)
 }

@@ -9,7 +9,6 @@ import { handleGetQuestions,
 import { handleUserLogin } from './auth';
 import {
   getInitialData,
-  saveNewUser,
   saveQuestionAnswer,
   saveQuestion
 } from '../utils/DataAPI';

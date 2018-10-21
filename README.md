@@ -10,7 +10,7 @@ Installation and Launch :-
    To install the application clone this git repository
   $ git clone https://github.com/akshataw/my-would-you-rather.git
 
-  $ cd would-you-rather-app
+  $ cd my-would-you-rather
 
 Install dependencies using npm command line tool
   $ npm install
