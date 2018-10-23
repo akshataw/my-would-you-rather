@@ -106,6 +106,7 @@ input[type=text]{
 
 .selected{
   background-color: #ae34db;
+  border-radius: 8px;
 }
 
 table{

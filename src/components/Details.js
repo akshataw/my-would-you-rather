@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom';
 import { handleAnswer } from '../actions/shared';
 import NavBar from './NavBar';
 import Posts from './Posts';
-import ErrorPage from './ErrorPage'; 
+import ErrorPage from './ErrorPage';
 
 class Details extends React.Component {
   constructor (props) {
@@ -36,6 +36,9 @@ class Details extends React.Component {
   render(){
     const { question, auth, user, total, percentOne, percentTwo } = this.props
     const { answer } = this.state
+    if(!question){
+      return <ErrorPage />
+    }
     if(auth === null){
       return <Redirect to='/loginpage' />
     }
