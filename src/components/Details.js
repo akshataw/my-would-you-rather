@@ -4,6 +4,7 @@ import { Redirect } from 'react-router-dom';
 import { handleAnswer } from '../actions/shared';
 import NavBar from './NavBar';
 import Posts from './Posts';
+import ErrorPage from './ErrorPage'; 
 
 class Details extends React.Component {
   constructor (props) {

@@ -67,8 +67,13 @@ class LoginPage extends React.Component{
            alert("Check the username!")
          )}
          <form onSubmit={this.handleLogin}>
-          <div className="inputfield">
-           <input type="text" id="username" placeholder="Enter Username" />
+          <div className="form-group">
+           <select className="form-control" id="username" Style="height: 40px; width:300px; font-size:20px; font-weight:bolder; border: 2px solid black; border-radius: 8px; align:center;">
+           <option select="selected">Select your username</option>
+           <option>sarahedo</option>
+           <option>tylermcginnis</option>
+           <option>johndoe</option>
+          </select>
            </div>
           <br/>
           <div className="login-button">

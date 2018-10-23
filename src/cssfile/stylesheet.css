@@ -104,6 +104,9 @@ input[type=text]{
   font-size: 20px;
 }
 
+.selected{
+  background-color: #ae34db;
+}
 
 table{
   border: 6px solid #ccc;

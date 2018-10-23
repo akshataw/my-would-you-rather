@@ -11,6 +11,7 @@ import NewQuestion from './components/NewQuestion';
 import MyQuestions from './components/MyQuestions';
 import LeaderBoard from './components/LeaderBoard';
 import LogoutPage from './components/Logout';
+import ErrorPage from './components/ErrorPage';
 
 class App extends Component {
   state = {

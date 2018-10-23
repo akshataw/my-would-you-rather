@@ -41,17 +41,17 @@ class HomePage extends React.Component{
        <br/>
        <div className="questions" Style="float:right;">
         <button className={ answeredQues ? 'answered active-link' : 'answered'} onClick={this.changeMode} Style="height:50px; font-size:22px; background: #2ECC71; border: 2px solid #229954; border-radius:6px;">Answered</button>&nbsp;
-        <button className={ answeredQues ? 'unanswered' : 'unanswered active-link'} onClick={this.changeMode} Style="height:50px; font-size:22px; background: #2ECC71; border: 2px solid #229954; border-radius:6px;">Unanswered</button>
+        <button className={ answeredQues ? 'unanswered' : 'unanswered active-link'} onClick={this.changeMode} Style="height:50px; font-size:22px; background: blue; border: 2px solid #229954; border-radius:6px;">Unanswered</button>
        </div>
        <br/>
        <br/>
        <div >
        <div className="question-set">
         <center>
-        { answeredQues && answered.map(question => (
+        { answeredQues &&  answered.map(question => (
           <Questions question={question} answer={user.answers[question.id]}  key={question.id} />
         ))}
-        { !answeredQues && unanswered.map(question => (
+        { !answeredQues &&  unanswered.map(question => (
           <Questions question={question} key={question.id} />
         ))}
         </center>

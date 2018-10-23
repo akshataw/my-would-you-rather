@@ -43,11 +43,11 @@ class NewQuestion extends React.Component{
         <div className="media">
          <div className="media-body">
           <div className="input-box">
-            <input type="text" className="opt input option-one" placeholder="First Option..." />
+            <input type="text" className="opt input option-one" placeholder="First Option..." required />
          </div>
          <h2 Style="margin-left:10px;">OR</h2>
          <div className="input-box">
-           <input type="text" className="opt input option-two" placeholder="Second Option..." />
+           <input type="text" className="opt input option-two" placeholder="Second Option..." required />
          </div>
          </div>
          <div className="media-right">

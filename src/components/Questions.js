@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { handleAnswer } from '../actions/shared';
+import ErrorPage from './ErrorPage';
 
 class Questions extends Component {
   constructor (props) {
@@ -26,7 +27,7 @@ class Questions extends Component {
   }
 
   render(){
-    const { question } = this.props
+    const { question, heading } = this.props
     const { answer } = this.state
     let classes = []
     if(answer){
@@ -41,7 +42,10 @@ class Questions extends Component {
       classes = ['opt option-one', 'opt option-two']
     }
     return (
-      <div className="container">
+      <div>
+      <div>
+       <h2>{this.props.heading}</h2>
+      </div>
        <div className="well" Style="background: #CCD1D1; border: 2px solid #660099; border-radius: 8px;">
        <div className="media">
         <div className="media-body">
