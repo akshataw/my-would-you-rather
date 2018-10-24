@@ -125,3 +125,82 @@ tr{
 tr:hover{
   background: #F9E7FF;
 }
+
+
+.links {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.unansweredQues-link {
+  background: #76F49D;
+  color: #FFF;
+  border-radius: 100px;
+  margin-left: 50px;
+}
+
+.unansweredQues-link:hover {
+  background: #3EDB6E;
+  color: #FFF;
+}
+
+.answeredQues-link {
+  background: #46F57C;
+  color: #FFF;
+  border-radius: 100px;
+}
+
+.answeredQues-link:hover {
+  background: #3EDB6E;
+  color: #FFF;
+}
+
+.centered {
+  display: flex;
+  width: 80%;
+  font-size: 25px;
+  font-family: cursive;
+  font-weight: bold;
+  float: left;
+  text-align: center;
+  margin-left: 50px;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.questions-box {
+  margin-top: -50px;
+  border: 1px solid #707070;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 2px 2px #777;
+  height: 80%;
+  width: 100%;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  cursor: pointer;
+}
+
+.unansweredQues-button {
+  border-top-left-radius: 20px;
+  border-right: 1px solid #707070;
+  border: 2px solid blue;
+  border-radius: 8px;
+}
+
+.answeredQues-button {
+  border: 2px solid blue;
+  border-top-right-radius: 20px;
+  border-radius: 8px;
+}
+
+.active {
+  background: #95FFB2;
+}

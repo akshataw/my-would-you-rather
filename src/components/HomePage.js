@@ -11,21 +11,20 @@ class HomePage extends React.Component{
     this.state = {
       answeredQues: false
     }
-    this.changeMode = this.changeMode.bind(this)
+    this.handleSwitch = this.handleSwitch.bind(this);
   }
 
-  changeMode(){
-    if(this.state.answeredQues){
-      this.setState({
-        answeredQues: false
-      })
+  handleSwitch (action) {
+    switch (action) {
+      case 'answeredQues':
+        this.setState({ answeredQues: true })
+        break
+      case 'unansweredQues':
+        this.setState({ answeredQues: false })
+        break
+      default:
+        break
     }
-    else{
-      this.setState({
-        answeredQues: true
-      })
-    }
-    this.forceUpdate()
   }
 
   render(){
@@ -39,23 +38,28 @@ class HomePage extends React.Component{
         <NavBar />
        <UserBar user={ user } />
        <br/>
-       <div className="questions" Style="float:right;">
-        <button className={ answeredQues ? 'answered active-link' : 'answered'} onClick={this.changeMode} Style="height:50px; font-size:22px; background: #2ECC71; border: 2px solid #229954; border-radius:6px;">Answered</button>&nbsp;
-        <button className={ answeredQues ? 'unanswered' : 'unanswered active-link'} onClick={this.changeMode} Style="height:50px; font-size:22px; background: blue; border: 2px solid #229954; border-radius:6px;">Unanswered</button>
+       <div className="questions" Style="float:center;">
+        <div className="centered">
+         <div className="questions-box">
+           <div className="buttons">
+             <div className={answeredQues ? 'answeredQues-button button active' : 'answeredQues-button button'} onClick={() => this.handleSwitch('answeredQues')}>Answered Questions</div>
+             <div className={answeredQues ? 'unansweredQues-button button' : 'unansweredQues-button button active'} onClick={() => this.handleSwitch('unansweredQues')}>Unanswered Questions</div>
+           </div>
+           <div className="sections">
+           <div className={answeredQues ? 'answeredQues-section' : 'answeredQues-section hidden'} id='answeredQues-section'>
+           { answeredQues &&  answered.sort().map(question => (
+             <Questions question={question} answer={user.answers[question.id]}  key={question.id} />
+           ))}
+           </div>
+
+             <div className={answeredQues ? 'unansweredQues-section hidden' : 'unansweredQues-section'}>
+             { !answeredQues &&  unanswered.sort().map(question => (
+               <Questions question={question} key={question.id} />
+             ))}
+             </div>
+           </div>
+         </div>
        </div>
-       <br/>
-       <br/>
-       <div >
-       <div className="question-set">
-        <center>
-        { answeredQues &&  answered.map(question => (
-          <Questions question={question} answer={user.answers[question.id]}  key={question.id} />
-        ))}
-        { !answeredQues &&  unanswered.map(question => (
-          <Questions question={question} key={question.id} />
-        ))}
-        </center>
-        </div>
        </div>
     </div>
     )
