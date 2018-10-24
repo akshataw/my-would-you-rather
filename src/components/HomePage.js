@@ -49,13 +49,13 @@ class HomePage extends React.Component{
            <div className={answeredQues ? 'answeredQues-section' : 'answeredQues-section hidden'} id='answeredQues-section'>
            { answeredQues &&  answered.sort().map(question => (
              <Questions question={question} answer={user.answers[question.id]}  key={question.id} />
-           ))}
+           )).reverse()}
            </div>
 
              <div className={answeredQues ? 'unansweredQues-section hidden' : 'unansweredQues-section'}>
              { !answeredQues &&  unanswered.sort().map(question => (
                <Questions question={question} key={question.id} />
-             ))}
+             )).reverse()}
              </div>
            </div>
          </div>

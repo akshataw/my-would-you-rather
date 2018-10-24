@@ -19,7 +19,7 @@ const MyQuestion = (props) => {
       <div className="question-set">
         { questions.map(question => (
           <Questions question={question} answer={user.answers[question.id]} key={question.id} />
-        ))}
+        )).reverse()}
       </div>
     </div>
   )
