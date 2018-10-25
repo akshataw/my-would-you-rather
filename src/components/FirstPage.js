@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const FirstPage = (props) => {
-  const user = props
+const FirstPage = () => {
   return(
     <div className="container">
     <center className="first-page">

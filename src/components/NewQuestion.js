@@ -23,12 +23,13 @@ class NewQuestion extends React.Component{
     })
   }
   render(){
+    console.log(window.location.toString())
     if(this.props.auth === null){
-      return <Redirect to='/' />
+      return <Redirect to='/loginpage' />
     }
 
     if(this.state.redirect){
-      return <Redirect to='/myQuestion' />
+      return <Redirect to='/me' />
     }
     return(
       <div className="container">

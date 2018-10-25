@@ -7,7 +7,7 @@ import { Redirect } from 'react-router-dom';
 
 const MyQuestion = (props) => {
   const { questions, user, auth } = props
-
+  
   if(auth === null){
     return <Redirect to='/loginpage' />
   }

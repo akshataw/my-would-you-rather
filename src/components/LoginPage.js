@@ -31,6 +31,7 @@ class LoginPage extends React.Component{
     e.preventDefault()
     const username = e.target[0].value
     let found = false
+    this.props.history.go(-2)
     const { users, dispatch } = this.props
     users.map(user => {
       if(user === username){
@@ -55,6 +56,7 @@ class LoginPage extends React.Component{
     if(redirect || auth != null){
       return <Redirect to='/me' />
     }
+
     return(
       <div className="container">
         <h2 className="login-page">Login Page</h2>

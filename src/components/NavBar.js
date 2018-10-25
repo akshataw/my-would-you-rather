@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const NavBar = (props) => {
-  const { user } = props
+const NavBar = () => {
     return(
       <div className="navs" Style="background: #CCD1D1; border-radius: 8px;">
        <ul className="nav nav-pills">

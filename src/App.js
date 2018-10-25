@@ -14,9 +14,10 @@ import LogoutPage from './components/Logout';
 import ErrorPage from './components/ErrorPage';
 
 class App extends Component {
-  state = {
-    loading: true
-  };
+    state = {
+      loading: true
+    };
+
   componentDidMount(){
      setTimeout(() => this.setState({
         loading: false
@@ -34,6 +35,7 @@ class App extends Component {
        <BrowserRouter>
         <div className="routes">
          <Route exact path='/' component={FirstPage} />
+         <Route exact path='/ ' component={ErrorPage} />
          <Route exact path='/loginpage' component={LoginPage} />
          <Route exact path='/me' component={HomePage} />
          <Route exact path='/questions/:question_id' component={Details} />

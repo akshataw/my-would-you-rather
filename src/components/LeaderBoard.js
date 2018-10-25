@@ -4,8 +4,8 @@ import { Redirect } from 'react-router-dom';
 import NavBar from './NavBar';
 
 const LeaderBoard = (props) => {
-  const { auth, user, data } = props
-
+  const { auth, data } = props
+  console.log(window.location.toString())
   if(auth === null){
     return <Redirect to='/loginpage' />
   }
